@@ -73,9 +73,11 @@ export default defineComponent({
   },
   setup() {
     const isMobile = ref(window.innerWidth < 768);
+    const isSmallMobile = ref(window.innerWidth <= 418);
 
     const handleResize = () => {
       isMobile.value = window.innerWidth < 768;
+      isSmallMobile.value = window.innerWidth <= 418;
     };
 
     onMounted(() => {

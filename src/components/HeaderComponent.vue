@@ -163,6 +163,7 @@ export default defineComponent({
   setup() {
     const windowWidth = ref(window.innerWidth);
     const isMobile = ref(window.innerWidth < 768);
+    const isSmallMobile = ref(window.innerWidth <= 418);
     const searchLocation = ref('Austin, TX');
     const mobileMenuOpen = ref(false);
     const showLocationOptions = ref(false);
@@ -194,6 +195,7 @@ export default defineComponent({
     const handleResize = () => {
       windowWidth.value = window.innerWidth;
       isMobile.value = window.innerWidth < 768;
+      isSmallMobile.value = window.innerWidth <= 418;
     };
 
     const clearSearch = () => {
@@ -257,6 +259,7 @@ export default defineComponent({
     return {
       isMobile,
       windowWidth,
+      isSmallMobile,
       searchLocation,
       mobileMenuOpen,
       showLocationOptions,
@@ -672,7 +675,55 @@ export default defineComponent({
   }
   
 }
+/* Mobile-specific styles (420px and below) */
+@media (max-width: 418px) {
+  .mobile-header {
+    padding: 8px 10px;
+  }
 
+  .top-section {
+    margin-bottom: 10px;
+  }
+
+  .mobile-header .logo img {
+    height: 24px;
+  }
+
+  .search-input-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .mobile-filter-button {
+    width: 100%;
+    border-radius: 8px;
+    height: 40px;
+    justify-content: center;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .filter-dropdown {
+    width: 100%;
+  }
+
+  .save-search-button {
+    width: 100%;
+  }
+
+  .menu-button img,
+  .account-button img {
+    width: 20px;
+    height: 20px;
+  }
+}
 /* New styles for location dropdown */
 .search-input {
   position: relative;

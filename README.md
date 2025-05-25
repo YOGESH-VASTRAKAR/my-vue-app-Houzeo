@@ -1,5 +1,35 @@
-# Vue 3 + Vite
+This project follows a modular structure with a main App.vue importing three key components:
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+  1. HeaderComponent.vue
+  2. MapComponent.vue
+  3. PropertyListings.vue
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+How Components Work Together
+
+ App.vue acts as the root component, orchestrating data flow :
+
+ my-vue-app/  
+  ├── src/  
+  │   ├── assets/          # svg icon
+  │   ├── components/      # HeaderComponent.vue  # MapComponent.vue  # PropertyListings.vue
+  │   ├── App.vue          # Main Vue component  
+  │   └── main.js          # Vue app entry point  
+  ├── public/              # images
+  ├── .gitignore           # Files to ignore in Git  
+  ├── package.json         # Project dependencies  
+  └── README.md            # This file  
+
+How to Run the project and Builds for production 
+
+  npm run dev          # Starts development server
+  npm run build        # Builds for production
+
+Contact
+
+  Author: Yogesh Vastrakar
+  Email: yogeshvastrakar.yv@gmail.com
+  LinkedIn: https://www.linkedin.com/in/yogesh-vastrakar/
+  Portfolio: https://yv-my-portfolio.netlify.app/
+  
+Live Demo 
+🌐 https://houzeo-vue-task.netlify.app/

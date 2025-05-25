@@ -32,4 +32,4 @@ Contact
   Portfolio: https://yv-my-portfolio.netlify.app/
   
 Live Demo 
-🌐 
+🌐 https://houzeo-vue-task.netlify.app/
